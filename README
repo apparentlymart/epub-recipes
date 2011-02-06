@@ -1,0 +1,18 @@
+
+This tool consumes recipes formatted in a straightforward text-based format
+and produces an epub document that can be loaded onto an e-reader for
+reference during cooking.
+
+I've only tested it on the Barnes and Noble Nook, but it ought to work on
+any e-reader that can handle basic XHTML and CSS. It is especially likely
+to work on e-readers based on Adobe Digital Editions.
+
+An example of the directory structure and file format provided is in this
+repository:
+    https://github.com/adrianaj/recipes
+
+Note that the templates used by this program hard-code a particular book
+title, author and guid. If you want to use this for something else you
+should probably change that.
+
+
