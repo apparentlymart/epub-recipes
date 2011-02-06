@@ -146,8 +146,8 @@ sub transform_recipe_file {
     #print $_, "\n" for @ingredients;
 
     my $vars = {
-        title => $title,
-        servings => $servings,
+        title => do_special_chars($title),
+        servings => $servings ? do_special_chars($servings) : undef,
         ingredients => \@ingredients,
         steps => \@steps,
     };

@@ -4,15 +4,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>[% title | html %]</title>
+  <title>[% title %]</title>
   <link href="recipe.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <h1>[% title | html %]</h1>
+  <h1>[% title %]</h1>
 
   [% IF servings %]
-  <p id="serving">[% servings | html %]</p>
+  <p id="serving">[% servings %]</p>
   [% END %]
 
   <table id="ingredients">
