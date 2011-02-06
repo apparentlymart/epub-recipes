@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>[% title | html %]</title>
+  <link href="recipe.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>[% title | html %]</h1>
+
+  [% IF servings %]
+  <p id="serving">[% servings | html %]</p>
+  [% END %]
+
+  <table id="ingredients">
+    [% FOREACH ingredient IN ingredients %]
+    [% IF (loop.index % 2) == 0 %]
+    <tr>
+    [% END %]
+        <td>[% ingredient %]</td>
+    [% IF (loop.index % 2) == 1 %]
+    </tr>
+    [% END %]
+    [% END %]
+  </table>
+
+  <div id="method">
+    <ol>
+      [% FOREACH step IN steps %]
+      <li>[% step %]</li>
+      [% END %]
+    </ol>
+  </div>
+</body>
+</html>
